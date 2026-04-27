@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--
+Gen AI use acknowledgement
+
+I acknowledge the use of ChatGPT-5.4 (OpenAI, https://chat.openai.com/, accessed through the Codex extension in VS Code) to support parts of this project
+ChatGPT-5.4 was used to explain coding logic, clarify technical principles, suggest possible solutions, and assist with troubleshooting and web page testing during the development process
+The project was developed based on my existing programming skills, while ChatGPT-5.4 was used to provide conceptual support for some functions, features, and coding structures that were new to me
+
+In terms of data processing and functional development, ChatGPT-5.4 helped me refine the structure and functionality of the web page
+This included support in the following areas
+- providing guidance on the implementation of external link navigation
+- reviewing the code logic to ensure that the web page could run properly
+
+In terms of visual design, ChatGPT-5.4 helped me improve the page layout and achieve a more visually coherent interface
+This included support in the following areas
+- helping me translate the interface elements from my own web prototype into HTML and CSS structures
+- offering visual improvement suggestions after the page was running
+-->
+<html lang="en">
+<head>
+    <!-- 1. Document head and assets -->
+    <!-- 1.1 Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leeds Student Apartment Finder</title>
+
+    <!-- 1.2 External fonts and styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- 2. Page header and about dialog -->
+    <!-- 2.1 Header banner -->
+    <header class="panel page-header">
+        <div class="page-header-inner">
+            <div class="page-header-copy">
+                <h1>Find a suitable student apartment in Leeds!</h1>
+                <p>Housing panic? Cancelled. We've mapped out 50 Uni of Leeds dorms just for you. Poke around the markers or ranked cards to scope out the details and find your ultimate match.</p>
+            </div>
+            <!-- Toggle opens the About dialog controlled by logic.js -->
+            <button
+                id="page-note-toggle"
+                class="page-note-toggle"
+                type="button"
+                aria-haspopup="dialog"
+                aria-controls="page-note-modal"
+                aria-expanded="false"
+            >
+                <span class="page-note-toggle-icon" aria-hidden="true"></span>
+                <span class="page-note-toggle-text">About this page</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2.2 About dialog -->
+    <div id="page-note-modal" class="page-note-modal" hidden>
+        <section class="panel page-note-dialog" role="dialog" aria-modal="true" aria-labelledby="page-note-title">
+            <!-- Close button lets users dismiss the opening note -->
+            <button id="page-note-close" class="page-note-close" type="button" aria-label="Close page note">
+                <svg class="page-note-close-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 7L17 17"></path>
+                    <path d="M17 7L7 17"></path>
+                </svg>
+            </button>
+            <h2 id="page-note-title">About this page</h2>
+            <div class="page-note-body">
+                <!-- Keep the About dialog to a single image and contact line -->
+                <img class="page-note-illustration" src="icon/pic_pagenote.png" alt="About this page illustration">
+
+                <!-- Leave the developer contact visible without extra explanatory copy -->
+                <p class="page-note-credit"><strong>Developer:</strong> Hanyue Luo, University of Leeds, <a href="mailto:trfb0853@leeds.ac.uk">trfb0853@leeds.ac.uk</a></p>
+            </div>
+        </section>
+    </div>
+
+    <!-- 3. Control sidebar -->
+    <!-- 3.1 Main app layout -->
+    <div class="app-shell">
+        <aside class="sidebar">
+            <!-- 3.2 Preference controls -->
+            <section class="panel controls-panel">
+                <div class="panel-title">
+                    <h2>Preference Controls</h2>
+                </div>
+
+                <!-- Target picker provides the location used for distance scoring -->
+                <div class="control-card">
+                    <label class="control-label" for="target-selector">Target location</label>
+                    <select id="target-selector">
+                        <!-- University options represent common campus destinations -->
+                        <optgroup label="University of Leeds">
+                            <option value="53.808055,-1.561523" data-category="school">Leeds University Business School</option>
+                            <option value="53.806795,-1.551874" data-category="school">Laidlaw Library</option>
+                            <option value="53.807804,-1.552707" data-category="school" selected>Parkinson Court</option>
+                            <option value="53.804374,-1.551714" data-category="school">The Edge</option>
+                            <option value="53.804925,-1.554665" data-category="school">Roger Stevens Building</option>
+                            <option value="53.806322,-1.554651" data-category="school">Edward Boyle Library</option>
+                            <option value="53.803579,-1.555333" data-category="school">Worsley Building</option>
+                        </optgroup>
+                        <!-- Shopping options let users compare access to city amenities -->
+                        <optgroup label="Shopping">
+                            <option value="53.796661,-1.543846" data-category="shopping">Trinity Leeds</option>
+                            <option value="53.797203,-1.538927" data-category="shopping">Leeds Kirkgate Market</option>
+                            <option value="53.798176,-1.537398" data-category="shopping">John Lewis &amp; Partners Leeds</option>
+                            <option value="53.802242,-1.544049" data-category="shopping">Merrion Centre</option>
+                            <option value="53.800293,-1.543958" data-category="shopping">St Johns Centre</option>
+                        </optgroup>
+                        <!-- Transport options include rail, bus, and airport targets -->
+                        <optgroup label="Transport">
+                            <option value="53.795236,-1.547738" data-category="train">Leeds Railway Station</option>
+                            <option value="53.797072,-1.536153" data-category="train">Leeds Bus Station</option>
+                            <option value="53.868984,-1.659971" data-category="airport">Leeds Bradford Airport</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <!-- 3.3 Weight sliders -->
+                <div class="control-card control-card-weights">
+                    <p class="helper-text">
+                        Set each factor from 1 to 5. After adjusting the sliders, apply your choices to refresh the ranking.
+                    </p>
+
+                    <!-- Each slider controls one MCDA ranking weight -->
+                    <div class="slider-grid">
+                        <div class="slider-group">
+                            <label for="w-dist">
+                                <span>Shorter travel distance</span>
+                                <span class="slider-value" id="val-dist">3</span>
+                            </label>
+                            <input type="range" id="w-dist" min="1" max="5" value="3">
+                            <span class="slider-caption">Higher values favor closer apartments to target.</span>
+                        </div>
+
+                        <div class="slider-group">
+                            <label for="w-price">
+                                <span>Lower weekly rent</span>
+                                <span class="slider-value" id="val-price">3</span>
+                            </label>
+                            <input type="range" id="w-price" min="1" max="5" value="3">
+                            <span class="slider-caption">Higher values emphasize affordability.</span>
+                        </div>
+
+                        <div class="slider-group">
+                            <label for="w-rating">
+                                <span>Higher user rating</span>
+                                <span class="slider-value" id="val-rating">3</span>
+                            </label>
+                            <input type="range" id="w-rating" min="1" max="5" value="3">
+                            <span class="slider-caption">Higher values reward better reviews.</span>
+                        </div>
+
+                        <div class="slider-group">
+                            <label for="w-year">
+                                <span>More recent renovation</span>
+                                <span class="slider-value" id="val-year">3</span>
+                            </label>
+                            <input type="range" id="w-year" min="1" max="5" value="3">
+                            <span class="slider-caption">Higher values prioritize newer apartments.</span>
+                        </div>
+                    </div>
+
+                    <!-- Buttons apply scores, reset defaults, or fit all locations -->
+                    <div class="control-actions">
+                        <button id="apply-preferences-btn" class="action-btn action-btn-primary" type="button">Apply</button>
+                        <button id="reset-preferences-btn" class="action-btn action-btn-secondary" type="button">Reset</button>
+                        <button id="show-all-btn" class="action-btn action-btn-tertiary" type="button">Show All</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3.4 Ranked results -->
+            <section class="panel list-panel">
+                <div class="panel-title">
+                    <h3>Ranked Recommendations</h3>
+                </div>
+                <!-- logic.js fills this container with recommendation cards -->
+                <div id="recommendation-list"></div>
+            </section>
+        </aside>
+
+        <!-- 4. Map display -->
+        <!-- 4.1 Map panel -->
+        <main class="map-panel">
+            <!-- 4.2 Floating legend -->
+            <div class="map-overlay">
+                <div class="legend-card" aria-label="Map legend">
+                    <div class="legend-list">
+                        <span class="legend-pill"><img class="legend-icon" src="icon/icon_house.png" alt="House icon">Apartments</span>
+                        <span class="legend-pill"><img class="legend-icon" src="icon/icon_school.png" alt="School icon">University targets</span>
+                        <span class="legend-pill"><img class="legend-icon" src="icon/icon_shopping.png" alt="Shopping icon">Shopping targets</span>
+                        <span class="legend-pill"><img class="legend-icon" src="icon/icon_train.png" alt="Train icon">Railway station</span>
+                        <span class="legend-pill"><img class="legend-icon" src="icon/icon_airport.png" alt="Airport icon">Airport</span>
+                        <span class="legend-pill"><span class="legend-swatch legend-swatch-buffer" aria-hidden="true"></span>300 m buffer</span>
+                        <span class="legend-pill"><span class="legend-swatch legend-swatch-boundary" aria-hidden="true"></span>UoL campus boundary</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4.3 Leaflet map container -->
+            <div id="map"></div>
+        </main>
+    </div>
+
+    <!-- 5. Scripts -->
+    <!-- 5.1 Libraries, data, and app logic -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Local data files load before the page logic uses them -->
+    <script src="data/apartment_data.js"></script>
+    <script src="data/university_boundary.js"></script>
+    <script src="css/logic.js"></script>
+</body>
+</html>

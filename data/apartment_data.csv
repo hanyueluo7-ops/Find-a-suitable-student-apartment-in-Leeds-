@@ -1,0 +1,51 @@
+id,name,postcode,address,lat,lng,rating,rating_num,renovation_year,price_low,URL
+1,Oasis Residence,LS2 3BA,"Cookridge Street, 利兹 LS2 3BA, 英国",53.802566,-1.546817,4,2,2018,300,https://ypp.co.uk/building/leeds-oasis-residence/
+2,The Edge,LS3 1DH,"2 Westfield Road, 利兹 LS3 1DH, 英国",53.802316,-1.564235,4.8,60,2015,196,https://www.iconinc.co.uk/student-accommodation/leeds/the-edge
+3,Brotherton House,LS1 2FN,"Grace Street, 利兹 LS1 2FN, 英国",53.799054,-1.554582,5,1,2022,188,https://studyinn.com/student-accommodation/leeds/brotherton-house/
+4,LiveOasis St Albans Place,LS2 8GD,"Wade Lane, 利兹 LS2 8GD, 英国",53.8018,-1.541572,4.6,25,2023,295,https://ypp.co.uk/building/leeds-live-oasis-st-albans-place/
+5,CitySide,LS1 3EY,"Calverley Street, 利兹 LS1 3EY, 英国",53.803656,-1.549736,4.5,19,2016,268,https://www.downingstudents.com/student-accommodation/leeds/cityside/
+6,Altus House,LS2 8GH,"Tower House Street, 利兹 LS2 8GH, 英国",53.802483,-1.541625,4.7,245,2021,162,https://www.iqstudentaccommodation.com/leeds/altus-house?utm_source=google&utm_medium=cpc&utm_id=137868855_109409155822_781634411186_altus%20house&gad_source=1&gad_campaignid=137868855&gbraid=0AAAAADq8YbEYzEJQEKBvp4Zt2K9aCMKs7&gclid=CjwKCAjwwJzPBhBREiwAJfHRnYXprarcJWzqWn5hTuUKDtN8GV3ZKZ_s0vPZ4dvJ_9IXU3LfmoFL6hoCt68QAvD_BwE
+7,St. Albans,LS2 8JP,"Cross Belgrave Street, 利兹 LS2 8JP, 英国",53.800926,-1.541004,4.6,146,2019,268,https://www.vitastudent.com/en/student-accommodation/leeds/st-albans/
+8,Leonardo,LS2 8GY,"8 Great George Street, 利兹 LS2 8GY, 英国",53.801188,-1.546042,4.3,78,2023,168,https://herestudents.com/location/leeds/leonardo/
+9,IQ Leeds,LS6 2TL,"Cross Chancellor Street, 利兹 LS6 2TL, 英国",53.811357,-1.551734,4.4,8,2011,131,https://www.iqstudentaccommodation.com/leeds/iq-leeds
+10,Scape Leeds,LS2 8FZ,"44 Merrion Street, 利兹 LS2 8FZ, 英国",53.813825,-1.545997,4.5,34,2024,193,https://www.scape.com/
+11,Straits Aire,LS2 8JG,"Merrion Street, 利兹 LS2 8JG, 英国",53.80103,-1.542324,4.8,4,2024,245,https://host-students.com/
+12,The Glassworks,LS6 1FN,"228 Cardigan Road, 利兹 LS6 1FN, 英国",53.800732,-1.542009,4.8,43,2017,159,https://abodusstudents.com/
+13,Symons House,LS2 8DD,"Belgrave Street, 利兹 LS2 8DD, 英国",53.808395,-1.575105,4.6,78,2020,173,https://www.studentroost.co.uk/locations/leeds/symons-house
+14,Concept Place,LS3 1DN,"Park Lane, 利兹 LS3 1DN, 英国",53.801035,-1.541201,4.6,153,2017,114,https://www.unitestudents.com/leeds/concept-place
+15,Broadcasting Tower,LS2 9PD,"Woodhouse Lane, 利兹 LS2 9PD, 英国",53.801874,-1.563784,4.7,6,2025,215,https://www.unitestudents.com/leeds/broadcasting-tower
+16,Threadworks,LS1 4GG,"Lisbon Street, 利兹 LS1 4GG, 英国",53.805779,-1.547936,5,2,2025,158,https://www.mezzino.com/property/threadworks/
+17,Portland Crescent,LS1 3AY,"93 Portland Crescent, 利兹 LS1 3AY, 英国",53.798064,-1.556734,4.6,99,2020,312,https://www.vitastudent.com/en/cities/leeds/portland-crescent/
+18,The Refinery,LS3 1BZ,"6 Bingley Street, 利兹 LS3 1BZ, 英国",53.802844,-1.546693,4.8,87,2020,149,https://www.collegiate-ac.com/
+19,Sycamore House,LS3 1AQ,"15 Woodhouse Square, 利兹 LS3 1AQ, 英国",53.799611,-1.56191,4.4,26,2018,247,https://www.mezzino.com/property/sycamore-house/
+20,Sky Plaza,LS2 8AR,"Claypit Lane, 利兹 LS2 8AR, 英国",53.801374,-1.557352,4.4,229,2024,139,https://www.unitestudents.com/leeds/sky-plaza
+21,Asa Briggs House,LS3 1FF,"6 Saint John's Road, 利兹 LS3 1FF, 英国",53.804659,-1.544168,4.5,79,2016,136,https://www.capitolstudents.com/locations/leeds/?gad_source=1&gad_campaignid=23755323345&gbraid=0AAAAACQpwGwwsKzPf8ircmOxNwMx2lKIE&gclid=CjwKCAjwwJzPBhBREiwAJfHRneBJ35aNf_h3bhgtr-Enqx6wvHyjR7dGrP2UPRBBfyOxFmbwXdBmTRoCNBwQAvD_BwE
+22,White Rose View,LS2 8PT,"16 Merrion Way, 利兹 LS2 8PT, 英国",53.805247,-1.564417,4.8,150,2020,154,https://www.unitestudents.com/leeds/white-rose-view
+23,Burley Road,LS3 1LN,"Burley St, 利兹 LS3 1LN, 英国",53.802676,-1.542595,4.6,96,2022,116,https://www.universityliving.com/united-kingdom/leeds/property/burley-road?utm_source=google&utm_medium=cpc&utm_campaign=UNIPAIDLIVING-PMax-2026-UK-to-UK&gad_source=1&gad_campaignid=22819355976&gbraid=0AAAAADg_yXHV_w1sfKdhsCxnNp1fB4NMW&gclid=CjwKCAjwwJzPBhBREiwAJfHRnRz6ZKHguiT__0QNoRoU1_pl-2goW8bFuKAuw3JMMW6gSvi-lL7LHhoCsqsQAvD_BwE
+24,Marsden House,LS3 1JZ,"1-3 Burley Road, 利兹 LS3 1JZ, 英国",53.801152,-1.565325,4.3,16,2007,150,https://www.iqstudentaccommodation.com/leeds/marsden-house?utm_source=google&utm_medium=cpc&utm_id=137868855_39876672717_781634411168_marsden%20house&gad_source=1&gad_campaignid=137868855&gbraid=0AAAAADq8YbEYzEJQEKBvp4Zt2K9aCMKs7&gclid=CjwKCAjwwJzPBhBREiwAJfHRnRxB_bF5YYV4GGfZV7fyOCX42ju_YKFOw8tROQhRnOK7TtgUWEvXphoCy2gQAvD_BwE
+25,The Fabric Works,LS2 7FF,"4 Leylands Road, 利兹 LS2 7FF, 英国",53.801183,-1.564216,5,3,2025,218,https://www.beststudenthalls.com/uk/leeds/the-fabric-works/
+26,Union Student Living,LS3 1EF,"1 RUTLAND MOUNT, 利兹 LS3 1EF, 英国",53.80317,-1.533251,4.9,23,2020,235,https://en.uhomes.com/uk/leeds/detail-apartments-1495780
+27,Hepworth Lodge,LS1 4LA,"19 Marlborough Street, 利兹 LS1 4LA, 英国",53.800664,-1.562187,4.7,13,2005,142,https://www.sanctuary-students.com/
+28,St Mark's Court,LS6 2 QJ,"St Mark's Road, 利兹 LS6 2QJ, 英国",53.799068,-1.560792,5,4,1996,200,https://amberstudent.com/places/st-mark-s-court-leeds-2604133458308?utm_source=google_adwords&utm_campaign=performance_max_TestPrepConsultancies_all&utm_content=Pmax_TestPrepConsultancies_asset_group&utm_medium=cpc&keyword=&gad_source=1&gad_campaignid=21349890458&gbraid=0AAAAACSitS7Vi8H247f75rSvFxaXFFCXG&gclid=CjwKCAjwwJzPBhBREiwAJfHRnchABOfnGyrBL6POaW-oLmwJaCK8k6uQuPhrxgvpXIGTrwWEIxA9NRoCDooQAvD_BwE
+29,Pennine House,LS1 5RN,"Russell Street, 利兹 LS1 5RN, 英国",53.811357,-1.551734,4.1,9,2017,193,https://en.uhomes.com/uk/leeds/detail-apartments-14686
+30,Algernon Firth,LS1 3AR,"Saint George's Road, 利兹 LS1 3AR, 英国",53.79822,-1.548033,3.3,3,2008,133,https://ypp.co.uk/
+31,Headrow Court,LS1 2QJ,"Park Cross Street, 利兹 LS1 2QJ, 英国",53.801891,-1.553626,3.7,6,2025,229,https://www.cityroomrentals.co.uk/property/headrow-court/
+32,The Priory,LS2 9NG,"Springfield Mount, 利兹 LS2 9NG, 英国",53.799433,-1.550297,3.4,11,2022,220,https://prestigestudentliving.com/student-accommodation/leeds/the-priory
+33,Oxley Residence,LS16 8HL,"Weetwood Lane, 利兹 LS16 8HL, 英国",53.804814,-1.559122,4.5,4,2010,79,https://accommodation.leeds.ac.uk/directory_record/14/oxley-residences
+34,26 Great George Street,LS1 3DL,"26 Great George Street, 利兹 LS1 3DL, 英国",53.835771,-1.587699,5,1,2024,237,https://amberstudent.com/
+35,The Terry Frost Building,LS7 1EH,"Whitelock Street, 利兹 LS7 1EH, 英国",53.801756,-1.553825,4.9,29,2023,149,https://prestigestudentliving.com/student-accommodation/leeds/the-terry-frost-building/classic-ensuite
+36,The Tannery,LS3 1AF,"Cavendish Street, 利兹 LS3 1AF, 英国",53.804872,-1.534143,4.6,22,2012,128,https://wearehomesforstudents.com/student-accommodation/leeds/the-tannery
+37,The Foundry,LS3 1BN,"Cavendish Street, 利兹 LS3 1BN, 英国",53.800119,-1.56318,4.7,10,2018,140,https://wearehomesforstudents.com/student-accommodation/leeds/the-foundry
+38,Tribeka,LS2 8GL,"76 Cookridge Street, 利兹 LS2 8GL, 英国",53.799856,-1.562529,4,3,2024,176,https://prestigestudentliving.com/student-accommodation/leeds/tribeka
+39,Exchange Court,LS1 4AX,"Duncombe Street, 利兹 LS1 4AX, 英国",53.802277,-1.546304,4,2,2025,256,https://www.casita.com/student-accommodation/150842-exchange-court-leeds-uk
+40,Trinity Hall,LS6 2FD,"Holborn Approach, 利兹 LS6 2FD, 英国",53.798817,-1.558669,4.3,22,2016,136,https://trinity-hall.co.uk/
+41,Woodhouse Flats,LS2 9EP,"St Mark's Street, 利兹 LS2 9EP, 英国",53.813622,-1.554246,4.6,17,2022,141,https://ypp.co.uk/building/leeds-woodhouse-plaza/
+42,The Plaza,LS2 8AR,"Claypit Lane, 利兹 LS2 8AR, 英国",53.811284,-1.553997,4.5,157,2006,134,https://www.unitestudents.com/leeds/the-plaza
+43,Austin Hall,LS7 1AU,"Servia Road, 利兹 LS7 1AU, 英国",53.804659,-1.544168,4.3,26,2019,139,https://www.accommodationforstudents.com/student-hall/3691-austin-hall-asquith-house-leeds
+44,Clarence Dock Village,LS10 1LU,"Clarence Road, 利兹 LS10 1LU, 英国",53.811339,-1.54695,5,1,2016,118,https://accommodation.leeds.ac.uk/residence/34/clarence-dock-village
+45,Briggate Studios,LS1 6AA,"12 Briggate, 利兹 LS1 6AA, 英国",53.789769,-1.528724,2.3,7,2023,249,https://stuhomes.com/location/leeds/
+46,Mary Morris House,LS6 2DE,"SHIRE OAK ROAD, 利兹 LS6 2DE, 英国",53.795513,-1.542779,3,1,2020,89,https://essentialstudentliving.com/student-accommodation/leeds/mary-morris-house
+47,LiveOasis Merrion Street Gardens,LS2 8GG,"2 Wade Lane, 利兹 LS2 8GG, 英国",53.820422,-1.570457,5,2,2024,264,https://en.uhomes.com/uk/leeds/detail-apartments-1616693
+48,Asquith House,LS7 1AW,"Servia Road, 利兹 LS7 1AW, 英国",53.80105,-1.542749,3.3,4,2015,139,https://www.accommodationforstudents.com/student-hall/3691-austin-hall-asquith-house-leeds
+49,Triangle,LS3 1JP,"2 Burley Road, 利兹 LS3 1JP, 英国",53.811907,-1.547324,5,4,2005,129,https://triangle.parklaneproperties.com/
+50,Thornville Court,LS6 1 QW,"Thornville Court, 利兹 LS6 1QW, 英国",53.804444,-1.568525,4.5,2,2019,119,https://www.universityliving.com/united-kingdom/leeds/property/thornville-court-thornville-road
